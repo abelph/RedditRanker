@@ -27,7 +27,3 @@ def get_political_submissions():
         except:
             print("Unable to access post: " + sub)
     return posts
-
-# submission = reddit.submission(id=str(submissions[num]['id']))
-# print(submission.subreddit)
-# print(submission.comments[2].body)
