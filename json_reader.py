@@ -11,7 +11,7 @@ def get_political_submissions():
         if j['subreddit_id'] in approvedSubreddits:
             submissions.append(j)
             i += 1
-            if i >= 100:
+            if i >= 10:
                 break
 
     reddit = praw.Reddit(
