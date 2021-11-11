@@ -34,3 +34,10 @@ def build_network():
                             print("Something went wrong with making an edge")
     print("Built network")
     nx.write_gexf(G, "reddit_network.gexf")
+
+
+def grow_network():
+    global G
+    G = nx.read_gexf("reddit_network.gexf")
+    print("Read network")
+    build_network()

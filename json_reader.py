@@ -3,7 +3,7 @@ import praw
 
 
 def get_political_submissions():
-    approvedSubreddits = ['t5_2cneq']
+    approvedSubreddits = ['t5_2cneq', 't5_2qh31', 't5_2qh6p', 't5_2qn70', 't5_2tk0i']
     submissions = []
     i = 0
     for line in open("C:/Users/abelp/Documents/Classes/Networks/Data/RS_2019-09", 'r'):
@@ -11,7 +11,7 @@ def get_political_submissions():
         if j['subreddit_id'] in approvedSubreddits:
             submissions.append(j)
             i += 1
-            if i >= 20:
+            if i >= 100:
                 break
 
     reddit = praw.Reddit(
