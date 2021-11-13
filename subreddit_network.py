@@ -8,7 +8,7 @@ reddit = praw.Reddit(
     client_secret="BCD96zi9uth7HDNG7gqKvbqw13mjAg",
 )
 
-S = nx.Graph()
+S = nx.DiGraph()
 
 
 def build_subreddit_network():
@@ -33,3 +33,7 @@ def build_subreddit_network():
         print(users[user])
         for i in range(len(users[user]) - 1):
             if S.has_edge(users[user][i], users[user][i+1]):
+                S[users[user][i]][users[user][i+1]]['weight'] += 1
+            else:
+                S[users[user][i]][users[user][i + 1]]['weight'] = 1
+    nx.write_gexf(S, "subreddit_network.gexf")

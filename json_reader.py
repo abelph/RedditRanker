@@ -5,14 +5,17 @@ import praw
 def get_political_submissions():
     approvedSubreddits = ['t5_2cneq', 't5_2qh31', 't5_2qh6p', 't5_2qn70', 't5_2tk0i']
     submissions = []
+    min = 0
+    max = 10
     i = 0
     for line in open("C:/Users/abelp/Documents/Classes/Networks/Data/RS_2019-09", 'r'):
         j = json.loads(line)
         if j['subreddit_id'] in approvedSubreddits:
-            submissions.append(j)
+            if i > min:
+                submissions.append(j)
+                if i >= max:
+                    break
             i += 1
-            if i >= 10:
-                break
 
     reddit = praw.Reddit(
         user_agent="Comment Extraction",

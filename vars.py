@@ -1,0 +1,1 @@
+banned_users = ["AutoModerator", "PoliticsModeratorBot"]
