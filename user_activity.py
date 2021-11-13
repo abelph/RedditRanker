@@ -48,4 +48,16 @@ def grow_user_activity():
         get_user_activity()
 
 
-# def rate_user_activity:
+def rate_user_activity():
+    with open("user_activity.json") as activity_file:
+        users = json.load(activity_file)
+        print("Read file")
+        activity = {}
+        for user in users:
+            total = 0
+            activity[user] = {}
+            for sub in users[user]:
+                total += users[user][sub]
+            for sub in users[user]:
+                activity[user][sub] = users[user][sub] / total
+        return activity
