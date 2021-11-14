@@ -6,5 +6,7 @@ from user_activity import rate_user_activity
 from subreddit_network import build_activity_network
 
 #grow_network()
+#grow_user_activity()
+get_user_activity()
 build_activity_network()
 #rate_user_activity()

@@ -43,6 +43,7 @@ def build_activity_network():
                                 else:
                                     S[sub][post.subreddit.display_name]['weight'] -= 1
                             else:
+                                S.add_edge(sub, post.subreddit.display_name, weight=0)
                                 if comment.score > 0:
                                     S[sub][post.subreddit.display_name]['weight'] = 1
                                 else:

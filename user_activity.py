@@ -13,8 +13,9 @@ users = {}
 
 def get_user_activity():
     posts = get_political_submissions()
+    i = 1
     for post in posts:
-        print("Reading Post")
+        print("Reading Post "+str(i))
         if post.author is not None and post.author.name not in users:
             users[post.author.name] = {post.subreddit.display_name: 1}
         elif post.author is not None and post.subreddit.display_name not in users[post.author.name]:
@@ -33,6 +34,7 @@ def get_user_activity():
                         users[comment.author.name][post.subreddit.display_name] = 1
                     else:
                         users[comment.author.name][post.subreddit.display_name] += 1
+        i += 1
 
     #store as a json file
     js = json.dumps(users)
