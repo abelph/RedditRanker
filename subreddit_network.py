@@ -52,7 +52,7 @@ def build_activity_network():
 
     nx.write_gexf(S, "activity.gexf")
 
-def grow_activity_network:
+def grow_activity_network():
     S = nx.read_gexf("activity.gexf")
     print("Read network")
     build_activity_network()
