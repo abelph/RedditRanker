@@ -1,6 +1,7 @@
 import networkx as nx
 import praw
 from json_reader import get_political_submissions
+from vars import banned_users
 
 reddit = praw.Reddit(
     user_agent="Comment Extraction",
@@ -9,8 +10,6 @@ reddit = praw.Reddit(
 )
 
 G = nx.DiGraph()
-
-banned_users = ["AutoModerator", "PoliticsModeratorBot"]
 
 
 def build_network():
