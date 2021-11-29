@@ -10,7 +10,8 @@ reddit = praw.Reddit(
     client_secret="BCD96zi9uth7HDNG7gqKvbqw13mjAg",
 )
 
-S = nx.DiGraph()
+S_positive = nx.DiGraph()
+S_negative = nx.DiGraph()
 
 
 def build_activity_network():
@@ -20,17 +21,15 @@ def build_activity_network():
         if post.author is not None and post.author.name in activity:
             for sub in activity[post.author.name]:
                 if sub != post.subreddit.display_name and activity[post.author.name][sub] > .25:
-                    if S.has_edge(sub, post.subreddit.display_name):
-                        if post.score > 0:
-                            S[sub][post.subreddit.display_name]['weight'] += 1
-                        else:
-                            S[sub][post.subreddit.display_name]['weight'] -= 1
+                    if S_positive.has_edge(sub, post.subreddit.display_name) and post.score > 0:
+                        S_positive[sub][post.subreddit.display_name]['weight'] += 1
+                    elif S_negative.has_edge(sub, post.subreddit.display_name) and post.score <= 0:
+                        S_negative[sub][post.subreddit.display_name]['weight'] -= 1
                     else:
-                        S.add_edge(sub, post.subreddit.display_name, weight=0)
                         if post.score > 0:
-                            S[sub][post.subreddit.display_name]['weight'] = 1
+                            S_positive.add_edge(sub, post.subreddit.display_name, weight=1)
                         else:
-                            S[sub][post.subreddit.display_name]['weight'] = -1
+                            S_negative.add_edge(sub, post.subreddit.display_name, weight=-1)
 
         post.comments.replace_more(limit=None)
         for comment in post.comments.list():
@@ -38,24 +37,26 @@ def build_activity_network():
                 if comment.author.name not in banned_users and comment.parent().author.name not in banned_users:
                     for sub in activity[comment.author.name]:
                         if sub != post.subreddit.display_name and activity[comment.author.name][sub] > .25:
-                            if S.has_edge(sub, post.subreddit.display_name):
-                                if comment.score > 0:
-                                    S[sub][post.subreddit.display_name]['weight'] += 1
-                                else:
-                                    S[sub][post.subreddit.display_name]['weight'] -= 1
+                            if S_positive.has_edge(sub, post.subreddit.display_name) and comment.score > 0:
+                                S_positive[sub][post.subreddit.display_name]['weight'] += 1
+                            elif S_negative.has_edge(sub, post.subreddit.display_name) and comment.score > 0:
+                                S_negative[sub][post.subreddit.display_name]['weight'] -= 1
                             else:
-                                S.add_edge(sub, post.subreddit.display_name, weight=0)
                                 if comment.score > 0:
-                                    S[sub][post.subreddit.display_name]['weight'] = 1
+                                    S_positive.add_edge(sub, post.subreddit.display_name, weight=1)
                                 else:
-                                    S[sub][post.subreddit.display_name]['weight'] = -1
+                                    S_negative.add_edge(sub, post.subreddit.display_name, weight=-1)
 
-    nx.write_gexf(S, "activity.gexf")
+    nx.write_gexf(S_positive, "positive_activity.gexf")
+    nx.write_gexf(S_negative, "negative_activity.gexf")
 
 def grow_activity_network():
-    S = nx.read_gexf("activity.gexf")
-    print("Read network")
+    global S_positive, S_negative
+    S_positive = nx.read_gexf("positive_activity.gexf")
+    S_negative = nx.read_gexf("negative_activity.gexf")
+    print("Read networks")
     build_activity_network()
+
 # def build_subreddit_network():
 #     posts = get_political_submissions()
 #     users = {}
