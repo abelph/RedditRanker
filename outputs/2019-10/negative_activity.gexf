@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2021-11-29">
+    <creator>NetworkX 2.6.3</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Conservative" label="Conservative" />
+      <node id="politics" label="politics" />
+      <node id="atheism" label="atheism" />
+      <node id="worldnews" label="worldnews" />
+      <node id="science" label="science" />
+      <node id="Economics" label="Economics" />
+      <node id="entertainment" label="entertainment" />
+      <node id="facepalm" label="facepalm" />
+      <node id="technology" label="technology" />
+      <node id="democrats" label="democrats" />
+      <node id="sports" label="sports" />
+      <node id="environment" label="environment" />
+      <node id="NeutralPolitics" label="NeutralPolitics" />
+      <node id="Health" label="Health" />
+    </nodes>
+    <edges>
+      <edge source="Conservative" target="politics" id="0" weight="-1" />
+      <edge source="Conservative" target="worldnews" id="1" weight="-1" />
+      <edge source="Conservative" target="Economics" id="2" weight="-2" />
+      <edge source="Conservative" target="science" id="3" weight="-1" />
+      <edge source="Conservative" target="NeutralPolitics" id="4" weight="-1" />
+      <edge source="Conservative" target="technology" id="5" weight="-2" />
+      <edge source="politics" target="Conservative" id="6" weight="-1" />
+      <edge source="politics" target="science" id="7" weight="-1" />
+      <edge source="politics" target="worldnews" id="8" weight="-1" />
+      <edge source="politics" target="sports" id="9" weight="-1" />
+      <edge source="politics" target="facepalm" id="10" weight="-1" />
+      <edge source="politics" target="technology" id="11" weight="-1" />
+      <edge source="politics" target="Economics" id="12" weight="-1" />
+      <edge source="politics" target="environment" id="13" weight="-1" />
+      <edge source="politics" target="entertainment" id="14" weight="-1" />
+      <edge source="politics" target="atheism" id="15" weight="-1" />
+      <edge source="politics" target="democrats" id="16" weight="-1" />
+      <edge source="atheism" target="politics" id="17" weight="-1" />
+      <edge source="atheism" target="worldnews" id="18" weight="-1" />
+      <edge source="atheism" target="sports" id="19" weight="-2" />
+      <edge source="atheism" target="facepalm" id="20" weight="-2" />
+      <edge source="atheism" target="technology" id="21" weight="-3" />
+      <edge source="atheism" target="science" id="22" weight="-1" />
+      <edge source="atheism" target="entertainment" id="23" weight="-1" />
+      <edge source="worldnews" target="politics" id="24" weight="-1" />
+      <edge source="worldnews" target="Conservative" id="25" weight="-1" />
+      <edge source="worldnews" target="science" id="26" weight="-1" />
+      <edge source="worldnews" target="sports" id="27" weight="-1" />
+      <edge source="worldnews" target="environment" id="28" weight="-1" />
+      <edge source="worldnews" target="facepalm" id="29" weight="-1" />
+      <edge source="worldnews" target="atheism" id="30" weight="-1" />
+      <edge source="worldnews" target="technology" id="31" weight="-1" />
+      <edge source="worldnews" target="Economics" id="32" weight="-1" />
+      <edge source="worldnews" target="entertainment" id="33" weight="-1" />
+      <edge source="worldnews" target="NeutralPolitics" id="34" weight="-1" />
+      <edge source="science" target="worldnews" id="35" weight="-1" />
+      <edge source="science" target="sports" id="36" weight="-2" />
+      <edge source="science" target="politics" id="37" weight="-1" />
+      <edge source="science" target="facepalm" id="38" weight="-1" />
+      <edge source="science" target="technology" id="39" weight="-2" />
+      <edge source="science" target="Economics" id="40" weight="-1" />
+      <edge source="science" target="Conservative" id="41" weight="-1" />
+      <edge source="science" target="entertainment" id="42" weight="-1" />
+      <edge source="Economics" target="worldnews" id="43" weight="-1" />
+      <edge source="Economics" target="politics" id="44" weight="-1" />
+      <edge source="Economics" target="facepalm" id="45" weight="-1" />
+      <edge source="Economics" target="technology" id="46" weight="-1" />
+      <edge source="Economics" target="environment" id="47" weight="-1" />
+      <edge source="Economics" target="Conservative" id="48" weight="-1" />
+      <edge source="Economics" target="atheism" id="49" weight="-1" />
+      <edge source="Economics" target="science" id="50" weight="-1" />
+      <edge source="Economics" target="entertainment" id="51" weight="-2" />
+      <edge source="entertainment" target="worldnews" id="52" weight="-1" />
+      <edge source="entertainment" target="environment" id="53" weight="-2" />
+      <edge source="entertainment" target="Economics" id="54" weight="-4" />
+      <edge source="entertainment" target="facepalm" id="55" weight="-1" />
+      <edge source="entertainment" target="politics" id="56" weight="-1" />
+      <edge source="entertainment" target="science" id="57" weight="-7" />
+      <edge source="entertainment" target="technology" id="58" weight="-1" />
+      <edge source="facepalm" target="worldnews" id="59" weight="-1" />
+      <edge source="facepalm" target="politics" id="60" weight="-1" />
+      <edge source="facepalm" target="atheism" id="61" weight="-2" />
+      <edge source="facepalm" target="science" id="62" weight="-5" />
+      <edge source="facepalm" target="sports" id="63" weight="-1" />
+      <edge source="technology" target="worldnews" id="64" weight="-1" />
+      <edge source="technology" target="politics" id="65" weight="-1" />
+      <edge source="technology" target="environment" id="66" weight="-1" />
+      <edge source="technology" target="facepalm" id="67" weight="-8" />
+      <edge source="technology" target="science" id="68" weight="-1" />
+      <edge source="technology" target="Conservative" id="69" weight="-1" />
+      <edge source="technology" target="entertainment" id="70" weight="-1" />
+      <edge source="technology" target="NeutralPolitics" id="71" weight="-1" />
+      <edge source="technology" target="atheism" id="72" weight="-1" />
+      <edge source="technology" target="Economics" id="73" weight="-1" />
+      <edge source="democrats" target="politics" id="74" weight="-1" />
+      <edge source="democrats" target="worldnews" id="75" weight="-11" />
+      <edge source="democrats" target="science" id="76" weight="-1" />
+      <edge source="democrats" target="environment" id="77" weight="-1" />
+      <edge source="sports" target="politics" id="78" weight="-1" />
+      <edge source="sports" target="worldnews" id="79" weight="-1" />
+      <edge source="sports" target="environment" id="80" weight="-1" />
+      <edge source="sports" target="facepalm" id="81" weight="-6" />
+      <edge source="sports" target="atheism" id="82" weight="-1" />
+      <edge source="environment" target="worldnews" id="83" weight="-1" />
+      <edge source="environment" target="Economics" id="84" weight="-3" />
+      <edge source="environment" target="atheism" id="85" weight="-9" />
+      <edge source="environment" target="politics" id="86" weight="-2" />
+      <edge source="environment" target="entertainment" id="87" weight="-2" />
+      <edge source="environment" target="technology" id="88" weight="-3" />
+      <edge source="NeutralPolitics" target="worldnews" id="89" weight="-1" />
+      <edge source="NeutralPolitics" target="Economics" id="90" weight="-1" />
+      <edge source="Health" target="technology" id="91" weight="-1" />
+      <edge source="Health" target="science" id="92" weight="-1" />
+    </edges>
+  </graph>
+</gexf>

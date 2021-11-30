@@ -3,7 +3,7 @@ import praw
 
 
 def get_political_submissions():
-    approvedSubreddits = ['t5_2cneq', 't5_2qn70', 't5_2qh31', 't5_2qh6p', 't5_2tk0i', 't5_2qh1s', 't5_2qgzy', 't5_mouw', 't5_2qh16', 't5_2qh0f', 't5_2qh2p', 't5_2r5rp', 't5_2qh1n', 't5_2qh9z', 't5_2qh13', 't5_2x4yx', 't5_2qscv', 't5_2rg0n', 't5_2vtr4', 't5_2qiyc', 't5_2qjii']
+    approvedSubreddits = ['t5_2cneq', 't5_2qn70', 't5_2qh31', 't5_2qh6p', 't5_2tk0i', 't5_2qh1s', 't5_2qgzy', 't5_mouw', 't5_2qh16', 't5_2qh0f', 't5_2qh2p', 't5_2r5rp', 't5_2qh1n', 't5_2qh9z', 't5_2qh13', 't5_2x4yx', 't5_2qscv', 't5_2rg0n', ' t5_2ryez', 't5_2vjre', 't5_2qiyc', 't5_2qjii']
     submissions = []
 
     min = 0

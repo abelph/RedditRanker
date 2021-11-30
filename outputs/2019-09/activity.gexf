@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2021-11-15">
+    <creator>NetworkX 2.6.3</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="worldnews" label="worldnews" />
+      <node id="politics" label="politics" />
+      <node id="technology" label="technology" />
+      <node id="facepalm" label="facepalm" />
+      <node id="atheism" label="atheism" />
+      <node id="environment" label="environment" />
+      <node id="science" label="science" />
+      <node id="Economics" label="Economics" />
+      <node id="sports" label="sports" />
+    </nodes>
+    <edges>
+      <edge source="worldnews" target="politics" id="0" weight="37" />
+      <edge source="worldnews" target="environment" id="1" weight="1" />
+      <edge source="worldnews" target="science" id="2" weight="2" />
+      <edge source="worldnews" target="facepalm" id="3" weight="1" />
+      <edge source="worldnews" target="atheism" id="4" weight="17" />
+      <edge source="worldnews" target="Economics" id="5" weight="2" />
+      <edge source="worldnews" target="technology" id="6" weight="7" />
+      <edge source="politics" target="worldnews" id="7" weight="25" />
+      <edge source="politics" target="facepalm" id="8" weight="7" />
+      <edge source="politics" target="technology" id="9" weight="12" />
+      <edge source="politics" target="science" id="10" weight="1" />
+      <edge source="politics" target="atheism" id="11" weight="10" />
+      <edge source="technology" target="politics" id="12" weight="14" />
+      <edge source="technology" target="worldnews" id="13" weight="19" />
+      <edge source="technology" target="facepalm" id="14" weight="2" />
+      <edge source="technology" target="atheism" id="15" weight="2" />
+      <edge source="facepalm" target="worldnews" id="16" weight="5" />
+      <edge source="facepalm" target="politics" id="17" weight="2" />
+      <edge source="facepalm" target="atheism" id="18" weight="1" />
+      <edge source="facepalm" target="technology" id="19" weight="3" />
+      <edge source="atheism" target="facepalm" id="20" weight="1" />
+      <edge source="atheism" target="politics" id="21" weight="5" />
+      <edge source="atheism" target="worldnews" id="22" weight="3" />
+      <edge source="environment" target="technology" id="23" weight="-1" />
+      <edge source="environment" target="worldnews" id="24" weight="2" />
+      <edge source="science" target="environment" id="25" weight="2" />
+      <edge source="science" target="worldnews" id="26" weight="2" />
+      <edge source="Economics" target="worldnews" id="27" weight="1" />
+      <edge source="sports" target="facepalm" id="28" weight="1" />
+    </edges>
+  </graph>
+</gexf>
