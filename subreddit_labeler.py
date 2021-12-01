@@ -1,4 +1,5 @@
 import networkx as nx
+import json
 from enum import Enum
 from user_activity import rate_user_activity
 
@@ -167,6 +168,15 @@ def assign_user_leanings():
     for user in activity:
         subs = sorted(activity[user].items(), key=lambda x: x[1], reverse=True)
         if subs[0][0] in sub_leanings:
-            leanings[user] = sub_leanings[subs[0][0]][1]
+            if sub_leanings[subs[0][0]][1] == Politics.LEFT:
+                leanings[user] = "LEFT"
+            elif sub_leanings[subs[0][0]][1] == Politics.RIGHT:
+                leanings[user] = "RIGHT"
+            else:
+                leanings[user] = "MODERATE"
 
-    print(str(leanings))
+    # store as a json file
+    js = json.dumps(leanings)
+    f = open("user_leanings.json", "w")
+    f.write(js)
+    f.close()
