@@ -30,25 +30,45 @@ def assign_subreddit_leanings():
                 leanings[e[1]] = [0, Politics.MODERATE]
 
             if e[2]['weight'] >= 200:
-                if leanings[e[0]][1] == Politics.LEFT or leanings[e[1]][1] == Politics.LEFT:
+                if leanings[e[0]][1] == Politics.LEFT:
                     leanings[e[1]][0] += 3
-                elif leanings[e[0]][1] == Politics.RIGHT or leanings[e[1]][1] == Politics.RIGHT:
+                elif leanings[e[0]][1] == Politics.RIGHT:
                     leanings[e[1]][0] -= 3
+                else:
+                    if leanings[e[1]][1] == Politics.LEFT:
+                        leanings[e[0]][0] += 3
+                    elif leanings[e[1]][1] == Politics.RIGHT:
+                        leanings[e[0]][0] -= 3
             elif e[2]['weight'] >= 100:
-                if leanings[e[0]][1] == Politics.LEFT or leanings[e[1]][1] == Politics.LEFT:
+                if leanings[e[0]][1] == Politics.LEFT:
                     leanings[e[1]][0] += 2
-                elif leanings[e[0]][1] == Politics.RIGHT or leanings[e[1]][1] == Politics.RIGHT:
+                elif leanings[e[0]][1] == Politics.RIGHT:
                     leanings[e[1]][0] -= 2
+                else:
+                    if leanings[e[1]][1] == Politics.LEFT:
+                        leanings[e[0]][0] += 2
+                    elif leanings[e[1]][1] == Politics.RIGHT:
+                        leanings[e[0]][0] -= 2
             elif e[2]['weight'] >= 20:
-                if leanings[e[0]][1] == Politics.LEFT or leanings[e[1]][1] == Politics.LEFT:
+                if leanings[e[0]][1] == Politics.LEFT:
                     leanings[e[1]][0] += 1
-                elif leanings[e[0]][1] == Politics.RIGHT or leanings[e[1]][1] == Politics.RIGHT:
+                elif leanings[e[0]][1] == Politics.RIGHT:
                     leanings[e[1]][0] -= 1
+                else:
+                    if leanings[e[1]][1] == Politics.LEFT:
+                        leanings[e[0]][0] += 1
+                    elif leanings[e[1]][1] == Politics.RIGHT:
+                        leanings[e[0]][0] -= 1
             else:
-                if leanings[e[0]][1] == Politics.LEFT or leanings[e[1]][1] == Politics.LEFT:
+                if leanings[e[0]][1] == Politics.LEFT:
                     leanings[e[1]][0] += .5
-                elif leanings[e[0]][1] == Politics.RIGHT or leanings[e[1]][1] == Politics.RIGHT:
+                elif leanings[e[0]][1] == Politics.RIGHT:
                     leanings[e[1]][0] -= .5
+                else:
+                    if leanings[e[1]][1] == Politics.LEFT:
+                        leanings[e[0]][0] += .5
+                    elif leanings[e[1]][1] == Politics.RIGHT:
+                        leanings[e[0]][0] -= .5
         elif e[1] in leanings:
             if e[0] not in leanings:
                 leanings[e[0]] = [0, Politics.MODERATE]
@@ -84,16 +104,31 @@ def assign_subreddit_leanings():
                     leanings[e[1]][0] -= 3
                 elif leanings[e[0]][1] == Politics.RIGHT:
                     leanings[e[1]][0] += 3
+                else:
+                    if leanings[e[1]][1] == Politics.LEFT:
+                        leanings[e[0]][0] -= 3
+                    elif leanings[e[1]][1] == Politics.RIGHT:
+                        leanings[e[0]][0] += 3
             elif e[2]['weight'] <= -3:
                 if leanings[e[0]][1] == Politics.LEFT:
                     leanings[e[1]][0] -= 2
                 elif leanings[e[0]][1] == Politics.RIGHT:
                     leanings[e[1]][0] += 2
+                else:
+                    if leanings[e[1]][1] == Politics.LEFT:
+                        leanings[e[0]][0] -= 2
+                    elif leanings[e[1]][1] == Politics.RIGHT:
+                        leanings[e[0]][0] += 2
             else:
                 if leanings[e[0]][1] == Politics.LEFT:
-                    leanings[e[1]][0] -= .5
+                    leanings[e[1]][0] -= 1
                 elif leanings[e[0]][1] == Politics.RIGHT:
-                    leanings[e[1]][0] += .5
+                    leanings[e[1]][0] += 1
+                else:
+                    if leanings[e[1]][1] == Politics.LEFT:
+                        leanings[e[0]][0] -= 1
+                    elif leanings[e[1]][1] == Politics.RIGHT:
+                        leanings[e[0]][0] += 1
         if e[1] in leanings:
             if e[0] not in leanings:
                 leanings[e[0]] = [0, Politics.MODERATE]
