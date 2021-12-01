@@ -1,6 +1,6 @@
 import networkx as nx
 from enum import Enum
-
+from user_activity import rate_user_activity
 
 class Politics(Enum):
     LEFT = 1
@@ -119,5 +119,19 @@ def assign_subreddit_leanings():
             leanings[sub][1] = Politics.RIGHT
         elif leanings[sub][0] > 0:
             leanings[sub][1] = Politics.LEFT
+
+    print(str(leanings))
+    return leanings
+
+
+def assign_user_leanings():
+    sub_leanings = assign_subreddit_leanings()
+    activity = rate_user_activity()
+    leanings = {}
+
+    for user in activity:
+        subs = sorted(activity[user].items(), key=lambda x: x[1], reverse=True)
+        if subs[0][0] in sub_leanings:
+            leanings[user] = sub_leanings[subs[0][0]][1]
 
     print(str(leanings))
