@@ -149,14 +149,23 @@ def assign_subreddit_leanings():
                     leanings[e[0]][0] -= .5
                 elif leanings[e[1]][1] == Politics.RIGHT:
                     leanings[e[0]][0] += .5
-
+    jslean = {}
     for sub in leanings:
         if leanings[sub][0] < 0:
             leanings[sub][1] = Politics.RIGHT
+            jslean[sub] = "RIGHT"
         elif leanings[sub][0] > 0:
             leanings[sub][1] = Politics.LEFT
+            jslean[sub] = "LEFT"
+        else:
+            jslean[sub] = "MODERATE"
 
     print(str(leanings))
+
+    js = json.dumps(jslean)
+    f = open("subreddit_leanings.json", "w")
+    f.write(js)
+    f.close()
     return leanings
 
 

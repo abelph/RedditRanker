@@ -7,10 +7,10 @@ def get_political_submissions():
     submissions = []
 
     min = 0
-    max = 5
+    max = 5000
 
     i = 0
-    for line in open("C:/Users/abelp/Documents/Classes/Networks/Data/RS_2020-11", 'r'):
+    for line in open("C:/Users/Abel/Documents/Classes/Networks/Data/RS_2020-11", 'r'):
         j = json.loads(line)
         if j['subreddit_id'] in approvedSubreddits:
             if i > min:
