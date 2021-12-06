@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2021-12-03">
+    <creator>NetworkX 2.6.3</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="politics" label="politics" />
+      <node id="facepalm" label="facepalm" />
+      <node id="democrats" label="democrats" />
+      <node id="worldnews" label="worldnews" />
+      <node id="Conservative" label="Conservative" />
+      <node id="Coronavirus" label="Coronavirus" />
+      <node id="technology" label="technology" />
+      <node id="Economics" label="Economics" />
+      <node id="sports" label="sports" />
+      <node id="science" label="science" />
+      <node id="liberalgunowners" label="liberalgunowners" />
+      <node id="atheism" label="atheism" />
+      <node id="entertainment" label="entertainment" />
+      <node id="prolife" label="prolife" />
+      <node id="environment" label="environment" />
+      <node id="prochoice" label="prochoice" />
+      <node id="socialism" label="socialism" />
+      <node id="Health" label="Health" />
+      <node id="Capitalism" label="Capitalism" />
+    </nodes>
+    <edges>
+      <edge source="politics" target="facepalm" id="0" weight="-1" />
+      <edge source="politics" target="Economics" id="1" weight="-3" />
+      <edge source="politics" target="democrats" id="2" weight="-1" />
+      <edge source="politics" target="Conservative" id="3" weight="-1" />
+      <edge source="politics" target="worldnews" id="4" weight="-1" />
+      <edge source="politics" target="Coronavirus" id="5" weight="-1" />
+      <edge source="politics" target="science" id="6" weight="-1" />
+      <edge source="politics" target="technology" id="7" weight="-1" />
+      <edge source="politics" target="entertainment" id="8" weight="-1" />
+      <edge source="politics" target="liberalgunowners" id="9" weight="-1" />
+      <edge source="politics" target="sports" id="10" weight="-1" />
+      <edge source="politics" target="Health" id="11" weight="-1" />
+      <edge source="politics" target="atheism" id="12" weight="-1" />
+      <edge source="politics" target="environment" id="13" weight="-1" />
+      <edge source="politics" target="prochoice" id="14" weight="-1" />
+      <edge source="facepalm" target="democrats" id="15" weight="-4" />
+      <edge source="facepalm" target="politics" id="16" weight="-1" />
+      <edge source="facepalm" target="Conservative" id="17" weight="-1" />
+      <edge source="facepalm" target="worldnews" id="18" weight="-1" />
+      <edge source="facepalm" target="Coronavirus" id="19" weight="-1" />
+      <edge source="facepalm" target="technology" id="20" weight="-1" />
+      <edge source="facepalm" target="science" id="21" weight="-1" />
+      <edge source="facepalm" target="Economics" id="22" weight="-1" />
+      <edge source="democrats" target="facepalm" id="23" weight="-1" />
+      <edge source="democrats" target="worldnews" id="24" weight="-1" />
+      <edge source="democrats" target="Conservative" id="25" weight="-1" />
+      <edge source="democrats" target="politics" id="26" weight="-1" />
+      <edge source="democrats" target="liberalgunowners" id="27" weight="-2" />
+      <edge source="democrats" target="socialism" id="28" weight="-1" />
+      <edge source="worldnews" target="politics" id="29" weight="-1" />
+      <edge source="worldnews" target="Economics" id="30" weight="-1" />
+      <edge source="worldnews" target="Conservative" id="31" weight="-1" />
+      <edge source="worldnews" target="facepalm" id="32" weight="-1" />
+      <edge source="worldnews" target="Coronavirus" id="33" weight="-1" />
+      <edge source="worldnews" target="science" id="34" weight="-1" />
+      <edge source="worldnews" target="technology" id="35" weight="-1" />
+      <edge source="worldnews" target="sports" id="36" weight="-1" />
+      <edge source="worldnews" target="entertainment" id="37" weight="-4" />
+      <edge source="worldnews" target="atheism" id="38" weight="-1" />
+      <edge source="worldnews" target="environment" id="39" weight="-1" />
+      <edge source="worldnews" target="liberalgunowners" id="40" weight="-1" />
+      <edge source="worldnews" target="democrats" id="41" weight="-1" />
+      <edge source="Conservative" target="politics" id="42" weight="-1" />
+      <edge source="Conservative" target="Economics" id="43" weight="-1" />
+      <edge source="Conservative" target="democrats" id="44" weight="-1" />
+      <edge source="Conservative" target="worldnews" id="45" weight="-4" />
+      <edge source="Conservative" target="sports" id="46" weight="-1" />
+      <edge source="Conservative" target="science" id="47" weight="-1" />
+      <edge source="Conservative" target="facepalm" id="48" weight="-1" />
+      <edge source="Conservative" target="Coronavirus" id="49" weight="-1" />
+      <edge source="Conservative" target="technology" id="50" weight="-1" />
+      <edge source="Conservative" target="prolife" id="51" weight="-1" />
+      <edge source="Conservative" target="socialism" id="52" weight="-1" />
+      <edge source="Conservative" target="liberalgunowners" id="53" weight="-1" />
+      <edge source="Coronavirus" target="politics" id="54" weight="-1" />
+      <edge source="Coronavirus" target="worldnews" id="55" weight="-1" />
+      <edge source="Coronavirus" target="science" id="56" weight="-1" />
+      <edge source="Coronavirus" target="Conservative" id="57" weight="-1" />
+      <edge source="Coronavirus" target="technology" id="58" weight="-1" />
+      <edge source="Coronavirus" target="facepalm" id="59" weight="-1" />
+      <edge source="Coronavirus" target="Economics" id="60" weight="-1" />
+      <edge source="technology" target="politics" id="61" weight="-1" />
+      <edge source="technology" target="worldnews" id="62" weight="-1" />
+      <edge source="technology" target="sports" id="63" weight="-1" />
+      <edge source="technology" target="Conservative" id="64" weight="-1" />
+      <edge source="technology" target="facepalm" id="65" weight="-1" />
+      <edge source="technology" target="Coronavirus" id="66" weight="-1" />
+      <edge source="technology" target="science" id="67" weight="-1" />
+      <edge source="technology" target="Economics" id="68" weight="-1" />
+      <edge source="technology" target="democrats" id="69" weight="-1" />
+      <edge source="technology" target="liberalgunowners" id="70" weight="-1" />
+      <edge source="Economics" target="Conservative" id="71" weight="-8" />
+      <edge source="Economics" target="worldnews" id="72" weight="-1" />
+      <edge source="Economics" target="sports" id="73" weight="-2" />
+      <edge source="Economics" target="Coronavirus" id="74" weight="-1" />
+      <edge source="Economics" target="technology" id="75" weight="-1" />
+      <edge source="Economics" target="politics" id="76" weight="-1" />
+      <edge source="Economics" target="science" id="77" weight="-1" />
+      <edge source="sports" target="worldnews" id="78" weight="-1" />
+      <edge source="sports" target="Conservative" id="79" weight="-1" />
+      <edge source="sports" target="politics" id="80" weight="-1" />
+      <edge source="sports" target="technology" id="81" weight="-3" />
+      <edge source="sports" target="facepalm" id="82" weight="-1" />
+      <edge source="science" target="worldnews" id="83" weight="-1" />
+      <edge source="science" target="Conservative" id="84" weight="-1" />
+      <edge source="science" target="technology" id="85" weight="-12" />
+      <edge source="science" target="politics" id="86" weight="-1" />
+      <edge source="science" target="Coronavirus" id="87" weight="-1" />
+      <edge source="science" target="Economics" id="88" weight="-1" />
+      <edge source="liberalgunowners" target="worldnews" id="89" weight="-4" />
+      <edge source="liberalgunowners" target="entertainment" id="90" weight="-2" />
+      <edge source="liberalgunowners" target="technology" id="91" weight="-2" />
+      <edge source="liberalgunowners" target="Conservative" id="92" weight="-1" />
+      <edge source="liberalgunowners" target="politics" id="93" weight="-1" />
+      <edge source="liberalgunowners" target="Coronavirus" id="94" weight="-1" />
+      <edge source="atheism" target="worldnews" id="95" weight="-1" />
+      <edge source="atheism" target="Coronavirus" id="96" weight="-1" />
+      <edge source="atheism" target="politics" id="97" weight="-1" />
+      <edge source="atheism" target="Conservative" id="98" weight="-1" />
+      <edge source="atheism" target="technology" id="99" weight="-1" />
+      <edge source="atheism" target="Economics" id="100" weight="-1" />
+      <edge source="atheism" target="democrats" id="101" weight="-1" />
+      <edge source="atheism" target="sports" id="102" weight="-1" />
+      <edge source="atheism" target="socialism" id="103" weight="-1" />
+      <edge source="atheism" target="science" id="104" weight="-1" />
+      <edge source="entertainment" target="science" id="105" weight="-1" />
+      <edge source="entertainment" target="worldnews" id="106" weight="-1" />
+      <edge source="entertainment" target="technology" id="107" weight="-1" />
+      <edge source="entertainment" target="politics" id="108" weight="-1" />
+      <edge source="prolife" target="Conservative" id="109" weight="-2" />
+      <edge source="prolife" target="prochoice" id="110" weight="-1" />
+      <edge source="prolife" target="technology" id="111" weight="-1" />
+      <edge source="prolife" target="Capitalism" id="112" weight="-1" />
+      <edge source="environment" target="politics" id="113" weight="-1" />
+      <edge source="environment" target="worldnews" id="114" weight="-1" />
+      <edge source="prochoice" target="prolife" id="115" weight="-1" />
+      <edge source="socialism" target="Conservative" id="116" weight="-1" />
+      <edge source="Capitalism" target="technology" id="117" weight="-1" />
+    </edges>
+  </graph>
+</gexf>

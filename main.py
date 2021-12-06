@@ -8,11 +8,11 @@ from subreddit_network import grow_activity_network
 from subreddit_labeler import assign_subreddit_leanings
 from subreddit_labeler import assign_user_leanings
 
-#build_network()
+build_network()
 #grow_user_activity()
-#get_user_activity()
+get_user_activity()
 #rate_user_activity()
-#build_activity_network()
+build_activity_network()
 #grow_activity_network()
 #assign_subreddit_leanings()
 assign_user_leanings()
